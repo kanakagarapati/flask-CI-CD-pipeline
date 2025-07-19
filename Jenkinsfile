@@ -2,14 +2,16 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = "34.220.190.14"
+        EC2_IP = "34.220.190.14"  // Update with your EC2 IP
     }
 
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main',
-                git 'https://github.com/kanakagarapati/flask-CI-CD-pipeline.git'
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/kanakagarapati/flask-CI-CD-pipeline.git']]
+                ])
             }
         }
 
@@ -23,12 +25,12 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                sshagent(['ec2-ssh']) {
+                sshagent(['kanaka-ec2-ssh']) {
                     sh """
                     ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} '
-                        cd ~/flaskapp || mkdir ~/flaskapp &&
-                        git clone https://github.com/kanakagarapati/flask-CI-CD-pipeline.git ~/flaskapp || cd ~/flaskapp &&
-                        git pull &&
+                        mkdir -p ~/flaskapp &&
+                        cd ~/flaskapp &&
+                        if [ ! -d ".git" ]; then git clone https://github.com/kanakagarapati/flask-CI-CD-pipeline.git .; else git pull; fi &&
                         /usr/bin/python3 -m venv venv &&
                         ./venv/bin/pip install -r requirements.txt &&
                         sudo systemctl restart flaskapp
