@@ -2,15 +2,19 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = "34.220.190.14" // 🔁 Replace with your actual EC2 public IP
+        REPO_URL = 'https://github.com/kanakagarapati/flask-CI-CD-pipeline.git'
+        EC2_USER = 'ubuntu'
+        EC2_IP = '34.220.190.14'   // <-- Replace with your actual EC2 public IP if it changes
+        PROJECT_DIR = 'flaskapp'
     }
 
     stages {
+
         stage('Clone Repo') {
             steps {
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/kanakagarapati/flask-CI-CD-pipeline.git']]
+                    userRemoteConfigs: [[url: "${REPO_URL}"]]
                 ])
             }
         }
@@ -25,15 +29,19 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                sshagent(credentials: ['kanaka-ec2-ssh']) {
+                sshagent(['kanaka-ec2-ssh']) {
                     sh """
-                    ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} '
-                        if [ ! -d ~/flaskapp ]; then
-                            git clone https://github.com/kanakagarapati/flask-CI-CD-pipeline.git ~/flaskapp;
+                    ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_IP} '
+                        cd ~ &&
+                        if [ -d "${PROJECT_DIR}/.git" ]; then
+                            echo "[INFO] Git repo exists. Pulling latest changes..." &&
+                            cd ${PROJECT_DIR} && git pull
                         else
-                            cd ~/flaskapp && git pull;
+                            echo "[INFO] Git repo not found. Cloning fresh..." &&
+                            rm -rf ${PROJECT_DIR} &&
+                            git clone ${REPO_URL} ${PROJECT_DIR} &&
+                            cd ${PROJECT_DIR}
                         fi &&
-                        cd ~/flaskapp &&
                         /usr/bin/python3 -m venv venv &&
                         ./venv/bin/pip install -r requirements.txt &&
                         sudo systemctl restart flaskapp
@@ -45,11 +53,11 @@ pipeline {
     }
 
     post {
-        success {
-            echo '✅ Deployment Successful!'
-        }
         failure {
-            echo '❌ Deployment Failed.'
+            echo "❌ Deployment Failed."
+        }
+        success {
+            echo "✅ Deployment Successful."
         }
     }
 }
