@@ -31,17 +31,29 @@ flask-CI-CD-pipeline/
     sudo systemctl enable jenkins
     sudo systemctl start jenkins
     ```
+      
 <img width="2386" height="1284" alt="image" src="https://github.com/user-attachments/assets/af4381b0-2e36-491e-a5bc-261754031d49" />
 
-     - opened jenkins with url `http://34.220.190.14:8080/`
-     - Got below screen to create password.
+- opened jenkins with url `http://34.220.190.14:8080/`
+- Got below screen to create password.
      
 <img width="2378" height="1346" alt="image" src="https://github.com/user-attachments/assets/9cd608e6-33ce-4acc-b02b-596a61726773" />
-     - Ran this `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` to get password
+- Ran this `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` to get password
 <img width="1280" height="184" alt="image" src="https://github.com/user-attachments/assets/b1882297-0b40-48be-b9e7-20efbc36dfc3" />
 
+<img width="2900" height="1648" alt="image" src="https://github.com/user-attachments/assets/ef6e6fa5-9d94-4dad-a785-8cde4aefd8b9" />
+<img width="2303" height="1618" alt="image" src="https://github.com/user-attachments/assets/6b1bfdfb-8000-45e0-80eb-4b06fc6eec4d" />
 
-     
+ <img width="2403" height="1619" alt="image" src="https://github.com/user-attachments/assets/dded3495-6e70-4c88-9a91-b54421760881" />
+ <img width="2414" height="1623" alt="image" src="https://github.com/user-attachments/assets/a0011634-dd36-4c6d-b643-fd027ad9283d" />
+
+ <img width="2455" height="1647" alt="image" src="https://github.com/user-attachments/assets/df58af1a-edd0-4070-804c-f44b23b07ad2" />
+
+ <img width="2810" height="1630" alt="image" src="https://github.com/user-attachments/assets/07d1a5c4-d2b4-45b3-b893-d93a15bb6dfb" />
+
+
+
+    
 
 - Python 3.12+ installed on EC2
 - Flask app in GitHub repo
