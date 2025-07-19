@@ -4,7 +4,7 @@ pipeline {
     environment {
         REPO_URL = 'https://github.com/kanakagarapati/flask-CI-CD-pipeline.git'
         EC2_USER = 'ubuntu'
-        EC2_IP = '34.220.190.14'   // <-- Replace with your actual EC2 public IP if it changes
+        EC2_IP = '34.220.190.14'
         PROJECT_DIR = 'flaskapp'
     }
 
