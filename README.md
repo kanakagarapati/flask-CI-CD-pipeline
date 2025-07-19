@@ -10,7 +10,14 @@ flask-CI-CD-pipeline/
 ├── requirements.txt
 └── Jenkinsfile
 ```
-# ✅ Prerequisites
+## Prerequisites
+
+- Jenkins server with Git, Python3, and Email configured.
+- Jenkins plugins: Git, Pipeline, Email Extension
+- Python app hosted on GitHub.
+- SSH access to deployment server (e.g., EC2)
+
+# ✅ Steps by step process
 
 - Jenkins installed on EC2
   - As soon as launch ec2 instance run below commands.
@@ -23,7 +30,19 @@ flask-CI-CD-pipeline/
     sudo apt install jenkins -y
     sudo systemctl enable jenkins
     sudo systemctl start jenkins
-    ```  
+    ```
+<img width="2386" height="1284" alt="image" src="https://github.com/user-attachments/assets/af4381b0-2e36-491e-a5bc-261754031d49" />
+
+     - opened jenkins with url `http://34.220.190.14:8080/`
+     - Got below screen to create password.
+     
+<img width="2378" height="1346" alt="image" src="https://github.com/user-attachments/assets/9cd608e6-33ce-4acc-b02b-596a61726773" />
+     - Ran this `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` to get password
+<img width="1280" height="184" alt="image" src="https://github.com/user-attachments/assets/b1882297-0b40-48be-b9e7-20efbc36dfc3" />
+
+
+     
+
 - Python 3.12+ installed on EC2
 - Flask app in GitHub repo
 - Jenkins Git + Pipeline plugins installed
