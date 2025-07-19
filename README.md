@@ -71,7 +71,20 @@ flask-CI-CD-pipeline/
 
 <img width="2874" height="1642" alt="image" src="https://github.com/user-attachments/assets/1a1161a3-3bab-44e4-ab71-db53019e0b5f" />
 
+### 🔐 Required Open Ports in EC2 Security Group
 
+To ensure your Jenkins pipeline and Flask app run properly, the following inbound ports must be open in your EC2 security group:
+
+| Type            | Protocol | Port Range | Source     | Purpose                                  |
+|-----------------|----------|------------|------------|------------------------------------------|
+| SSH             | TCP      | 22         | 0.0.0.0/0  | For SSH access to the EC2 instance       |
+| HTTP            | TCP      | 80         | 0.0.0.0/0  | Optional: For serving HTTP content       |
+| Custom TCP Rule | TCP      | 8080       | 0.0.0.0/0  | For GitHub webhook communication to Jenkins |
+| Custom TCP Rule | TCP      | 5000       | 0.0.0.0/0  | For accessing the Flask application      |
+
+
+
+----------------------
 
 
 ## 🚀 2) GitHub Actions CI/CD Pipeline
