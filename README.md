@@ -67,15 +67,10 @@ flask-CI-CD-pipeline/
 <img width="2869" height="1386" alt="image" src="https://github.com/user-attachments/assets/b11370d1-0b45-44ab-ace0-f27591b81bce" />
 <img width="2871" height="672" alt="image" src="https://github.com/user-attachments/assets/b179a009-abbd-4e40-a8f5-8a46629825c1" />
 <img width="2895" height="1613" alt="image" src="https://github.com/user-attachments/assets/ee8fc3da-706a-4208-a13a-ab59e85a795d" />
+<img width="2839" height="1636" alt="image" src="https://github.com/user-attachments/assets/17c54892-d3af-4d82-98b6-237c25a5c771" />
 
+<img width="2874" height="1642" alt="image" src="https://github.com/user-attachments/assets/1a1161a3-3bab-44e4-ab71-db53019e0b5f" />
 
-- Python 3.12+ installed on EC2
-- Flask app in GitHub repo
-- Jenkins Git + Pipeline plugins installed
-- GitHub Webhook configured to trigger Jenkins
-- Required Jenkins credentials (`kanaka-ec2-ssh`)
-- Enabled Ports 5000 for testing and 8080 for jenkins opened in EC2 Security Group
----
 
 
 
