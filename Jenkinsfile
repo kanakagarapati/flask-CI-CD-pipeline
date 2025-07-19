@@ -7,6 +7,7 @@ pipeline {
 
     stages {
         stage('Clone Repo') {
+            git branch: 'main',
             steps {
                 git 'https://github.com/kanakagarapati/flask-CI-CD-pipeline.git'
             }
