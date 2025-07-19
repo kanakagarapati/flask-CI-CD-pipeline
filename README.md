@@ -80,8 +80,21 @@ This repo uses GitHub Actions for CI/CD.
 
 ### ✅ Trigger Conditions:
 - Push to `staging`: triggers staging deployment.
+- <img width="2284" height="960" alt="image" src="https://github.com/user-attachments/assets/99a9f67b-5aa0-4e93-8cbc-ae38af0f295e" />
+<img width="2782" height="1739" alt="image" src="https://github.com/user-attachments/assets/65a388c0-8e0c-4c7c-ac69-09db7fab1d2d" />
+<img width="1804" height="1246" alt="image" src="https://github.com/user-attachments/assets/7e45695b-3085-4718-950c-373cf86853fb" />
+<img width="2876" height="1051" alt="image" src="https://github.com/user-attachments/assets/452f3ad8-45fa-431b-a498-db86ddeac12b" />
+<img width="2854" height="1335" alt="image" src="https://github.com/user-attachments/assets/2d39613a-97fd-49ca-9394-d3e6aa0eada6" />
+
 - Push to `main`: triggers test workflow.
+- <img width="2787" height="1546" alt="image" src="https://github.com/user-attachments/assets/867d9fbb-4f7a-48da-a161-4b5323df9e6c" />
+
 - Release tag: triggers production deployment.
+<img width="2805" height="1611" alt="image" src="https://github.com/user-attachments/assets/53c3f7e3-1112-4a16-afb5-cf8f88dad85f" />
+<img width="2740" height="1596" alt="image" src="https://github.com/user-attachments/assets/e35c0fb0-e5a0-4359-b0e5-6fd870e6696a" />
+<img width="2710" height="1621" alt="image" src="https://github.com/user-attachments/assets/148ab06e-29df-4a06-82fc-e9c273d93587" />
+<img width="2879" height="875" alt="image" src="https://github.com/user-attachments/assets/9e120a90-3ab0-40c5-82aa-444939070f76" />
+<img width="2888" height="1306" alt="image" src="https://github.com/user-attachments/assets/400c3613-e48b-43a0-9c5d-9f5104e4198d" />
 
 ### ⚙️ Workflow Jobs:
 1. **Install Dependencies**
