@@ -51,9 +51,23 @@ flask-CI-CD-pipeline/
 
  <img width="2810" height="1630" alt="image" src="https://github.com/user-attachments/assets/07d1a5c4-d2b4-45b3-b893-d93a15bb6dfb" />
 
+<img width="2477" height="1503" alt="image" src="https://github.com/user-attachments/assets/04926a2e-fea3-48f3-adc9-172b24f38218" />
 
+<img width="2471" height="453" alt="image" src="https://github.com/user-attachments/assets/2a665652-2c69-43fb-8712-605dd6495878" />
 
+<img width="2636" height="1643" alt="image" src="https://github.com/user-attachments/assets/e08eabab-aefc-4ca3-963e-6054a077aec4" />
+
+<img width="2708" height="1629" alt="image" src="https://github.com/user-attachments/assets/e725545e-d68f-4b7c-9d6b-8f949741e028" />
+
+<img width="2618" height="1642" alt="image" src="https://github.com/user-attachments/assets/d39c084c-529c-44b5-a0e5-640cfd6f8951" />
     
+<img width="2863" height="1650" alt="image" src="https://github.com/user-attachments/assets/0bf2dbbc-229f-4247-b690-fd4b5c2a2c6e" />
+<img width="2765" height="1566" alt="image" src="https://github.com/user-attachments/assets/f55cd01c-3bc5-4f41-a5e9-8c321424efa7" />
+
+<img width="2869" height="1386" alt="image" src="https://github.com/user-attachments/assets/b11370d1-0b45-44ab-ace0-f27591b81bce" />
+<img width="2871" height="672" alt="image" src="https://github.com/user-attachments/assets/b179a009-abbd-4e40-a8f5-8a46629825c1" />
+<img width="2895" height="1613" alt="image" src="https://github.com/user-attachments/assets/ee8fc3da-706a-4208-a13a-ab59e85a795d" />
+
 
 - Python 3.12+ installed on EC2
 - Flask app in GitHub repo
